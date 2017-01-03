@@ -31,4 +31,8 @@
         <attr name="text_three" format="string" />
     </declare-styleable>
 
+    <declare-styleable name="SideBar">
+        <attr name="maxTranslationX" format="dimension" />
+    </declare-styleable>
+
 </resources>
