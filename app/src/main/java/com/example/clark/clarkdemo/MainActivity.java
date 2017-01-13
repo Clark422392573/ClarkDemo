@@ -1,6 +1,7 @@
 package com.example.clark.clarkdemo;
 
 import android.animation.ObjectAnimator;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -18,6 +19,11 @@ import android.widget.Toast;
 
 import com.example.clark.clarkdemo.fantasyslide.SideBar;
 import com.example.clark.clarkdemo.fantasyslide.Transformer;
+import com.example.clark.clarkdemo.fragment.FragmentA;
+import com.example.clark.clarkdemo.fragment.FragmentB;
+import com.example.clark.clarkdemo.fragment.FragmentC;
+import com.example.clark.clarkdemo.fragment.FragmentD;
+import com.example.clark.clarkdemo.fragment.FragmentE;
 import com.example.clark.clarkdemo.spacetablayout.SpaceTabLayout;
 
 import java.util.ArrayList;
@@ -110,11 +116,14 @@ public class MainActivity extends AppCompatActivity {
             String title = ((TextView) view).getText().toString();
             if (title.startsWith("星期")) {
                 Toast.makeText(this, title, Toast.LENGTH_SHORT).show();
-            } else {
-                startActivity(UniversalActivity.newIntent(this, title));
+            } else if (title.equals("热门")){
+//                startActivity(new Intent(MainActivity.this, HotActivity.class));
+                Toast.makeText(this, title, Toast.LENGTH_SHORT).show();
+            }else {
+                Toast.makeText(this, title, Toast.LENGTH_SHORT).show();
             }
         } else if (view.getId() == R.id.userInfo) {
-            startActivity(UniversalActivity.newIntent(this, "个人中心"));
+            Toast.makeText(this, "个人中心", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -123,5 +132,4 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.saveState(outState);
         super.onSaveInstanceState(outState);
     }
-
 }

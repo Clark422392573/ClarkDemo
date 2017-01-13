@@ -80,7 +80,7 @@
             <TextView
                 style="@style/MenuText"
                 android:drawableLeft="@mipmap/coupon"
-                android:text="优惠券" />
+                android:text="热门" />
 
             <TextView
                 style="@style/MenuText"

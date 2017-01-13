@@ -7,8 +7,7 @@
     android:layout_height="?attr/actionBarSize"
     app:subtitle=" "
     app:title=" "
-    android:background="#607D8B"
-    tools:showIn="@layout/activity_main">
+    android:background="#607D8B">
 
     <TextView
         android:id="@+id/txt_tool_bar_title"
