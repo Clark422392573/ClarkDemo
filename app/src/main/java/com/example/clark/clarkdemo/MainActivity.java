@@ -117,8 +117,7 @@ public class MainActivity extends AppCompatActivity {
             if (title.startsWith("星期")) {
                 Toast.makeText(this, title, Toast.LENGTH_SHORT).show();
             } else if (title.equals("热门")){
-//                startActivity(new Intent(MainActivity.this, HotActivity.class));
-                Toast.makeText(this, title, Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, HotActivity.class));
             }else {
                 Toast.makeText(this, title, Toast.LENGTH_SHORT).show();
             }
