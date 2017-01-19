@@ -1,4 +1,6 @@
-<merge xmlns:android="http://schemas.android.com/apk/res/android">
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ListView
         android:id="@+id/list_view"
@@ -75,4 +77,4 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-</merge>
+</FrameLayout>
