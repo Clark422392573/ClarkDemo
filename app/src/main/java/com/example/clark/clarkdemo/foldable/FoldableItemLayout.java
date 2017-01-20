@@ -75,12 +75,10 @@ class FoldableItemLayout extends FrameLayout {
                 && cacheBitmap.getHeight() == height) {
             return;
         }
-
         if (cacheBitmap != null) {
             cacheBitmap.recycle();
             cacheBitmap = null;
         }
-
         if (width != 0 && height != 0) {
             try {
                 cacheBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
@@ -88,7 +86,6 @@ class FoldableItemLayout extends FrameLayout {
                 cacheBitmap = null;
             }
         }
-
         applyCacheBitmap(cacheBitmap);
     }
 
@@ -106,26 +103,20 @@ class FoldableItemLayout extends FrameLayout {
 
         topPart.applyFoldRotation(rotation);
         bottomPart.applyFoldRotation(rotation);
-
         setInTransformation(rotation != 0f);
-
         scaleFactor = 1f;
-
         if (isAutoScaleEnabled && width > 0) {
             double sin = Math.abs(Math.sin(Math.toRadians(rotation)));
             float dw = (float) (height * sin) * CAMERA_DISTANCE_MAGIC_FACTOR;
             scaleFactor = width / (width + dw);
-
             setScale(scale);
         }
     }
 
     public void setScale(float scale) {
         this.scale = scale;
-
         final float scaleX = scale * scaleFactor;
         final float scaleY = scale * scaleFactor * scaleFactorY;
-
         baseLayout.setScaleY(scaleFactorY);
         topPart.setScaleX(scaleX);
         topPart.setScaleY(scaleY);
@@ -152,7 +143,6 @@ class FoldableItemLayout extends FrameLayout {
             return;
         }
         this.isInTransformation = isInTransformation;
-
         baseLayout.setDrawToCache(isInTransformation);
         topPart.setVisibility(isInTransformation ? VISIBLE : INVISIBLE);
         bottomPart.setVisibility(isInTransformation ? VISIBLE : INVISIBLE);
@@ -228,7 +218,6 @@ class FoldableItemLayout extends FrameLayout {
                 invalidate();
             }
         }
-
     }
 
     /**

@@ -99,7 +99,6 @@ public class GlanceFoldShading implements FoldShading {
                 return glanceFrom.intersect(0, 0, glance.getWidth(), glance.getHeight());
             }
         }
-
         return false;
     }
 

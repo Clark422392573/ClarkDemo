@@ -46,5 +46,4 @@ public class SimpleFoldShading implements FoldShading {
         }
         return intensity;
     }
-
 }
