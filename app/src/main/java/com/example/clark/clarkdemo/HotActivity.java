@@ -2,8 +2,8 @@ package com.example.clark.clarkdemo;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -19,15 +19,21 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class HotActivity extends AppCompatActivity {
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+import butterknife.OnClick;
 
+public class HotActivity extends AppCompatActivity implements PaintingsAdapter.HotOnClick {
+
+    @InjectView(R.id.public_toolbar_return_back)
+    ImageView publicToolbarReturnBack;
     private View listTouchInterceptor;
     private View detailsLayout;
     private UnfoldableView unfoldableView;
     private PaintingsAdapter mPaintingsAdapter;
 
     // 设置适配器的图片资源
-    int[] imageId = new int[] {
+    int[] imageId = new int[]{
             R.mipmap.starry_night,
             R.mipmap.cafe_terrace,
             R.mipmap.starry_night_over_the_rhone,
@@ -36,19 +42,20 @@ public class HotActivity extends AppCompatActivity {
     };
 
     // 设置标题
-    String[] title = new String[] {
+    String[] title = new String[]{
             "starry night",
             "cafe terrace",
             "starry night over the rhone",
             "sunflowers",
-            "almond blossoms" };
+            "almond blossoms"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hot);
+        ButterKnife.inject(this);
 
-        ListView listView = Views.find(this, R.id.list_view);
+        ListView listView = Views.find(this, R.id.hot_list_view);
 
         List<Map<String, Object>> listitem = new ArrayList<Map<String, Object>>();
 
@@ -60,7 +67,7 @@ public class HotActivity extends AppCompatActivity {
 
             listitem.add(map);
         }
-        mPaintingsAdapter = new PaintingsAdapter(this, listitem);
+        mPaintingsAdapter = new PaintingsAdapter(this, listitem, this);
         listView.setAdapter(mPaintingsAdapter);
 
         listTouchInterceptor = Views.find(this, R.id.touch_interceptor_view);
@@ -117,5 +124,17 @@ public class HotActivity extends AppCompatActivity {
         title.setText("sunflowers");
         description.setText("year : 1899");
         unfoldableView.unfold(coverView, detailsLayout);
+    }
+
+    @OnClick(R.id.public_toolbar_return_back)
+    public void onClick() {
+        finish();
+    }
+
+    @Override
+    public void OnHotClick(View view) {
+        if (this instanceof HotActivity) {
+            this.openDetails(view);
+        }
     }
 }

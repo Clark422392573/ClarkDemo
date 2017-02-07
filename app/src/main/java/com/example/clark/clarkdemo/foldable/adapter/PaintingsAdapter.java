@@ -18,10 +18,12 @@ public class PaintingsAdapter extends BaseAdapter {
 
     private Context mContext;
     private List<Map<String, Object>> datas;
+    private HotOnClick mHotOnClick;
 
-    public PaintingsAdapter(Context context, List<Map<String, Object>> data){
+    public PaintingsAdapter(Context context, List<Map<String, Object>> data, HotOnClick hotOnClick){
         this.mContext = context;
         this.datas = data;
+        this.mHotOnClick = hotOnClick;
     }
 
     @Override
@@ -55,9 +57,10 @@ public class PaintingsAdapter extends BaseAdapter {
         mViewHolder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (view.getContext() instanceof HotActivity) {
-                    ((HotActivity) view.getContext()).openDetails(view);
-                }
+//                if (view.getContext() instanceof HotActivity) {
+//                    ((HotActivity) view.getContext()).openDetails(view);
+//                }
+                mHotOnClick.OnHotClick(view);
             }
         });
         return convertView;
@@ -73,4 +76,8 @@ public class PaintingsAdapter extends BaseAdapter {
         }
     }
 
+    public interface HotOnClick {
+
+        void OnHotClick(View view);
+    }
 }
