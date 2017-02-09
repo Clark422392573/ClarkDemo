@@ -3,7 +3,6 @@ package com.example.clark.clarkdemo;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
@@ -17,6 +16,7 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.CursorAdapter;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,10 +24,9 @@ import android.widget.Toast;
 import com.example.clark.clarkdemo.search.RecordSQLiteOpenHelper;
 import com.example.clark.clarkdemo.search.SearchListView;
 
-import java.util.Date;
-
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import butterknife.OnClick;
 
 public class SearchActivity extends AppCompatActivity {
 
@@ -39,8 +38,11 @@ public class SearchActivity extends AppCompatActivity {
     SearchListView listViewSearch;
     @InjectView(R.id.txt_search_clear)
     TextView txtSearchClear;
+    @InjectView(R.id.img_search_back)
+    ImageView imgSearchBack;
 
-    private RecordSQLiteOpenHelper helper = new RecordSQLiteOpenHelper(this);;
+    private RecordSQLiteOpenHelper helper = new RecordSQLiteOpenHelper(this);
+    ;
     private SQLiteDatabase db;
     private BaseAdapter adapter;
 
@@ -51,9 +53,6 @@ public class SearchActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_search);
         ButterKnife.inject(this);
-
-        // 初始化控件
-        setEditTextBtn();
 
         // 关键字查询逻辑代码
         setSearch();
@@ -85,7 +84,6 @@ public class SearchActivity extends AppCompatActivity {
                     }
                     // TODO 根据输入的内容模糊查询商品，并跳转到另一个界面，由你自己去实现
                     Toast.makeText(SearchActivity.this, "clicked!", Toast.LENGTH_SHORT).show();
-
                 }
                 return false;
             }
@@ -151,8 +149,8 @@ public class SearchActivity extends AppCompatActivity {
         Cursor cursor = helper.getReadableDatabase().rawQuery(
                 "select id as _id,name from records where name like '%" + tempName + "%' order by id desc ", null);
         // 创建adapter适配器对象
-        adapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1, cursor, new String[] { "name" },
-                new int[] { android.R.id.text1 }, CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER);
+        adapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1, cursor, new String[]{"name"},
+                new int[]{android.R.id.text1}, CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER);
         // 设置适配器
         listViewSearch.setAdapter(adapter);
         adapter.notifyDataSetChanged();
@@ -177,10 +175,8 @@ public class SearchActivity extends AppCompatActivity {
         db.close();
     }
 
-    private void setEditTextBtn() {
-        // 调整 EditText 左边的搜索按钮的大小
-        Drawable drawable = getResources().getDrawable(R.mipmap.search);
-        drawable.setBounds(0, 0, 60, 60);// 第一0是距左边距离，第二0是距上边距离，60分别是长宽
-        edtSearch.setCompoundDrawables(drawable, null, null, null);// 只放左边
+    @OnClick(R.id.img_search_back)
+    public void onClick() {
+        finish();
     }
 }
