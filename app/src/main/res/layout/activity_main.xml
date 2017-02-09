@@ -75,7 +75,7 @@
             <TextView
                 style="@style/MenuText"
                 android:drawableLeft="@mipmap/wallet"
-                android:text="钱包" />
+                android:text="搜索" />
 
             <TextView
                 style="@style/MenuText"
