@@ -42,7 +42,6 @@ public class SearchActivity extends AppCompatActivity {
     ImageView imgSearchBack;
 
     private RecordSQLiteOpenHelper helper = new RecordSQLiteOpenHelper(this);
-    ;
     private SQLiteDatabase db;
     private BaseAdapter adapter;
 

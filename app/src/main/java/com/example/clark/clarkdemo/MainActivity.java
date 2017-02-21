@@ -116,6 +116,8 @@ public class MainActivity extends AppCompatActivity {
             String title = ((TextView) view).getText().toString();
             if (title.startsWith("星期")) {
                 Toast.makeText(this, title, Toast.LENGTH_SHORT).show();
+            }else if (title.equals("朋友圈")){
+                startActivity(new Intent(MainActivity.this, MomentsActivity.class));
             }else if (title.equals("搜索")){
                 startActivity(new Intent(MainActivity.this, SearchActivity.class));
             }else if (title.equals("热门")){

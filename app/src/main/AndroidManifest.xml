@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".HotActivity" />
-        <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".MomentsActivity"></activity>
     </application>
 
 </manifest>
