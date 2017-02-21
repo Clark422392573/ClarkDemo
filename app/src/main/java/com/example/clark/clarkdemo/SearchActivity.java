@@ -126,7 +126,7 @@ public class SearchActivity extends AppCompatActivity {
         });
 
         // 插入数据，便于测试，否则第一次进入没有数据怎么测试呀？
-        insertData("Clark");
+        insertData("这是一条测试数据,每次进入默认插入一条");
 
         // 第一次进入查询所有的历史记录
         queryData("");

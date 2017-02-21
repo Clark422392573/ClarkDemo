@@ -5,4 +5,12 @@
     android:layout_height="?attr/actionBarSize"
     app:title="朋友圈">
 
+    <ImageView
+        android:id="@+id/moments_toolbar_return"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="left"
+        android:padding="10dp"
+        android:src="@mipmap/toolbar_return" />
+
 </android.support.v7.widget.Toolbar>

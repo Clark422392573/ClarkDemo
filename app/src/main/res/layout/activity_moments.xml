@@ -7,14 +7,14 @@
     android:fitsSystemWindows="true">
 
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar"
+        android:id="@+id/moments_appbar"
         android:layout_width="match_parent"
         android:layout_height="256dp"
         android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <android.support.design.widget.CollapsingToolbarLayout
-            android:id="@+id/collapsing_toolbar"
+            android:id="@+id/moments_collapsing_toolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
@@ -24,12 +24,12 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <ImageView
-                android:id="@+id/backdrop"
+                android:id="@+id/moments_backdrop"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true"
                 android:scaleType="centerCrop"
-                android:src="@mipmap/ic_launcher"
+                android:src="@mipmap/sunflowers"
                 app:layout_collapseMode="parallax" />
 
             <include layout="@layout/moments_toolbar" />
@@ -52,24 +52,23 @@
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp">
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:background="@mipmap/starry_night">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CardView" />
+                        android:text="翔大王万岁"
+                        android:layout_centerInParent="true"
+                        android:textColor="@android:color/white"/>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="CardView" />
-
-                </LinearLayout>
+                </RelativeLayout>
 
             </android.support.v7.widget.CardView>
 
@@ -81,8 +80,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:src="@mipmap/ic_launcher"
-        app:layout_anchor="@id/appbar"
+        android:src="@mipmap/avatar"
+        app:layout_anchor="@id/moments_appbar"
         app:layout_anchorGravity="bottom|right|end" />
 
 </android.support.design.widget.CoordinatorLayout>
