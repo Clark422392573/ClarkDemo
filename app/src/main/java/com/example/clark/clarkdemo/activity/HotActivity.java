@@ -1,4 +1,4 @@
-package com.example.clark.clarkdemo;
+package com.example.clark.clarkdemo.activity;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -10,6 +10,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.alexvasilkov.android.commons.utils.Views;
+import com.example.clark.clarkdemo.R;
 import com.example.clark.clarkdemo.foldable.UnfoldableView;
 import com.example.clark.clarkdemo.foldable.adapter.PaintingsAdapter;
 import com.example.clark.clarkdemo.foldable.shading.GlanceFoldShading;

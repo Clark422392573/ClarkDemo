@@ -16,9 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HotActivity" />
-        <activity android:name=".SearchActivity" />
-        <activity android:name=".MomentsActivity"></activity>
+        <activity android:name=".activity.HotActivity" />
+        <activity android:name=".activity.SearchActivity" />
+        <activity android:name=".activity.MomentsActivity"></activity>
     </application>
 
 </manifest>

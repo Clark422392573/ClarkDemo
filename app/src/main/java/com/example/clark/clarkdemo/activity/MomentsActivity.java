@@ -1,8 +1,10 @@
-package com.example.clark.clarkdemo;
+package com.example.clark.clarkdemo.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
+
+import com.example.clark.clarkdemo.R;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;

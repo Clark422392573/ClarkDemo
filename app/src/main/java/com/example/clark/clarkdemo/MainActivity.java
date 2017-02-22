@@ -17,6 +17,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.clark.clarkdemo.activity.HotActivity;
+import com.example.clark.clarkdemo.activity.MomentsActivity;
+import com.example.clark.clarkdemo.activity.SearchActivity;
 import com.example.clark.clarkdemo.fantasyslide.SideBar;
 import com.example.clark.clarkdemo.fantasyslide.Transformer;
 import com.example.clark.clarkdemo.fragment.FragmentA;

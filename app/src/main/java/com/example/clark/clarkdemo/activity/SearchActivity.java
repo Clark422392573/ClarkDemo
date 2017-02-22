@@ -1,4 +1,4 @@
-package com.example.clark.clarkdemo;
+package com.example.clark.clarkdemo.activity;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -21,6 +21,7 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.clark.clarkdemo.R;
 import com.example.clark.clarkdemo.search.RecordSQLiteOpenHelper;
 import com.example.clark.clarkdemo.search.SearchListView;
 
