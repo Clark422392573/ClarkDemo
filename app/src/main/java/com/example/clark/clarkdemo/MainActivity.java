@@ -1,5 +1,4 @@
 package com.example.clark.clarkdemo;
-
 import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.graphics.Color;

@@ -5,6 +5,7 @@ import android.util.AttributeSet;
 import android.widget.ListView;
 
 public class SearchListView extends ListView {
+
 	public SearchListView(Context context) {
 		super(context);
 	}
@@ -23,5 +24,4 @@ public class SearchListView extends ListView {
 				MeasureSpec.AT_MOST);
 		super.onMeasure(widthMeasureSpec, expandSpec);
 	}
-
 }

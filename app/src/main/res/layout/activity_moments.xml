@@ -81,6 +81,7 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:src="@mipmap/avatar"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
         app:layout_anchor="@id/moments_appbar"
         app:layout_anchorGravity="bottom|right|end" />
 
