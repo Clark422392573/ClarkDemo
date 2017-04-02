@@ -3,7 +3,6 @@ package com.example.clark.clarkdemo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
@@ -19,9 +18,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
     @InjectView(R.id.txt_welcome_timer)
     TextView mWelcomeTimer;
-
     private CountDownTimer timer;
-    private AlertDialog.Builder mDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
