@@ -51,7 +51,6 @@ public class FileDownloadManager {
         //第三种 自定义文件路径
         //req.setDestinationUri()
 
-
         // 设置一些基本显示信息
         req.setTitle(title);
         req.setDescription(description);
@@ -59,7 +58,6 @@ public class FileDownloadManager {
         return downloadManager.enqueue(req);//异步
         //dm.openDownloadedFile()
     }
-
 
     /**
      * 获取文件保存的路径
@@ -84,7 +82,6 @@ public class FileDownloadManager {
         return null;
     }
 
-
     /**
      * 获取保存文件的地址
      *
@@ -99,8 +96,6 @@ public class FileDownloadManager {
     public DownloadManager getDownloadManager() {
         return downloadManager;
     }
-
-
     /**
      * 获取下载状态
      *
@@ -127,5 +122,4 @@ public class FileDownloadManager {
         }
         return -1;
     }
-
 }

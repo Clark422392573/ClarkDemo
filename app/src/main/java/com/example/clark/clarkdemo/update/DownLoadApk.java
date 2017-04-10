@@ -14,6 +14,7 @@ import android.util.Log;
  * Created by Clark on 2017/4/2.
  */
 public class DownLoadApk {
+
     public static final String TAG = DownLoadApk.class.getSimpleName();
 
     public static void download(Context context, String url, String title, final String appName) {
@@ -60,7 +61,6 @@ public class DownLoadApk {
         context.startActivity(install);
     }
 
-
     /**
      * 获取apk程序信息[packageName,versionName...]
      *
@@ -75,7 +75,6 @@ public class DownLoadApk {
         }
         return null;
     }
-
 
     /**
      * 下载的apk和当前程序版本比较

@@ -12,7 +12,6 @@ import butterknife.OnClick;
 
 /**
  * Created by Clark on 2017/4/2.
- * 检查 APP 是否需要更新
  */
 public class WelcomeActivity extends AppCompatActivity {
 

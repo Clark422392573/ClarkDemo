@@ -71,8 +71,7 @@ public class AppInnerDownLoder {
 	 */
 	private static File downloadFile(String path,String appName ,ProgressDialog pd) throws Exception {
 		// 如果相等的话表示当前的sdcard挂载在手机上并且是可用的
-		if (Environment.MEDIA_MOUNTED.equals(Environment
-				.getExternalStorageState())) {
+		if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
 			URL url = new URL(path);
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setConnectTimeout(5000);

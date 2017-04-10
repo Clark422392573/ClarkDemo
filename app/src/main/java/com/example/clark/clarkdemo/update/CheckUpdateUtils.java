@@ -46,12 +46,8 @@ public class CheckUpdateUtils {
                 });
     }
 
-
     public interface CheckCallBack {
         void onSuccess(UpdateAppInfo updateInfo);
-
         void onError();
     }
-
-
 }
