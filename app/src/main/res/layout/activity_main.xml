@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
     <com.example.clark.clarkdemo.fantasyslide.FantasyDrawerLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/drawerLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+                                                                  android:id="@+id/drawerLayout"
+                                                                  android:layout_width="match_parent"
+                                                                  android:layout_height="match_parent">
 
         <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/activity_main"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                                                         xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                         android:id="@+id/activity_main"
+                                                         android:layout_width="match_parent"
+                                                         android:layout_height="match_parent">
 
             <android.support.v4.view.ViewPager
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="56dp" />
+                android:layout_marginBottom="56dp"/>
 
             <com.example.clark.clarkdemo.spacetablayout.SpaceTabLayout
                 android:id="@+id/spaceTabLayout"
@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 app:layout_behavior="com.example.clark.clarkdemo.spacetablayout.SpaceTabLayoutBehavior"
                 app:number_of_tabs="five"
-                app:starting_position="one" />
+                app:starting_position="one"/>
 
         </android.support.design.widget.CoordinatorLayout>
 
@@ -55,14 +55,14 @@
                     android:layout_margin="10dp"
                     android:src="@mipmap/avatar"
                     app:civ_border_color="@color/menu_text_color"
-                    app:civ_border_width="2dp" />
+                    app:civ_border_width="2dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Clark"
                     android:textColor="@color/menu_text_color"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"/>
 
             </LinearLayout>
 
@@ -70,27 +70,27 @@
                 style="@style/MenuText"
                 android:layout_width="match_parent"
                 android:drawableLeft="@mipmap/circle"
-                android:text="朋友圈" />
+                android:text="朋友圈"/>
 
             <TextView
                 style="@style/MenuText"
                 android:drawableLeft="@mipmap/wallet"
-                android:text="搜索" />
+                android:text="搜索"/>
 
             <TextView
                 style="@style/MenuText"
                 android:drawableLeft="@mipmap/coupon"
-                android:text="热门" />
+                android:text="热门"/>
 
             <TextView
                 style="@style/MenuText"
                 android:drawableLeft="@mipmap/friends"
-                android:text="好友" />
+                android:text="好友"/>
 
             <TextView
                 style="@style/MenuText"
                 android:drawableLeft="@mipmap/settings"
-                android:text="设置" />
+                android:text="设置"/>
 
         </com.example.clark.clarkdemo.fantasyslide.SideBar>
 
@@ -105,31 +105,31 @@
 
             <TextView
                 style="@style/MenuText"
-                android:text="星期一" />
+                android:text="星期一"/>
 
             <TextView
                 style="@style/MenuText"
-                android:text="星期二" />
+                android:text="星期二"/>
 
             <TextView
                 style="@style/MenuText"
-                android:text="星期三" />
+                android:text="星期三"/>
 
             <TextView
                 style="@style/MenuText"
-                android:text="星期四" />
+                android:text="星期四"/>
 
             <TextView
                 style="@style/MenuText"
-                android:text="星期五" />
+                android:text="星期五"/>
 
             <TextView
                 style="@style/MenuText"
-                android:text="星期六" />
+                android:text="星期六"/>
 
             <TextView
                 style="@style/MenuText"
-                android:text="星期日" />
+                android:text="星期日"/>
 
         </com.example.clark.clarkdemo.fantasyslide.SideBar>
 

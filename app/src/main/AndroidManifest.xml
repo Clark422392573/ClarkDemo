@@ -19,13 +19,6 @@
         <activity android:name=".activity.HotActivity" />
         <activity android:name=".activity.SearchActivity" />
         <activity android:name=".activity.MomentsActivity" />
-
-        <receiver android:name=".update.ApkInstallReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
-            </intent-filter>
-        </receiver>
-
     </application>
 
 </manifest>
